@@ -30,7 +30,7 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 1>;
+            bindings = <&mo 2>, <&to 2>;
         };
 
         magic: magic_hold_tap {
@@ -69,6 +69,18 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 57 58 59 60 61 62 63 73 74 75 76 77 78 79 72 55 56 54 71 70 69 52 53>;
         };
+
+        thumb_layers: thumb_layers {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_LAYERS";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            retro-tap;
+        };
     };
 
     macros {
@@ -106,6 +118,13 @@
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
+
+        type_dead: type_dead {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE>;
+            label = "TYPE_DEAD";
+        };
     };
 
     keymap {
@@ -121,12 +140,23 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2              &kp F3              &kp F4           &kp F5                                                                                                                             &kp F6           &kp F7           &kp F8              &kp F9               &kp F10
-&kp EQUAL   &kp N1              &kp N2              &kp N3           &kp N4                &kp N5                                                                                     &kp N6            &kp N7           &kp N8           &kp N9              &kp N0               &kp MINUS
-&kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &kp FR_SINGLE_QUOTE                                                                        &kp FR_SEMICOLON  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
-&kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                               &kp FR_DOT        &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
-&kp GRAVE   &kp FR_G            &none               &kp FR_J         &kp FR_K              &kp FR_MINUS         &kp LSHFT  &kp LCTRL     &layer_td  &kp LGUI  &kp RCTRL  &kp RET      &kp FR_SLASH      &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
-&magic 2 0  &kp HOME            &kp END             &kp LEFT         &kp RIGHT                                  &kp BSPC   &lt 1 DELETE  &kp LALT   &kp RALT  &kp TAB    &lt 4 SPACE                    &kp UP           &kp DOWN         &kp LBKT            &kp RBKT             &kp PG_DN
+&kp F1      &kp F2              &kp F3              &kp F4           &kp F5                                                                                                                                                 &kp F6           &kp F7           &kp F8              &kp F9               &kp F10
+&kp EQUAL   &kp N1              &kp N2              &kp N3           &kp N4                &kp N5                                                                                                         &kp N6            &kp N7           &kp N8           &kp N9              &kp N0               &kp MINUS
+&kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &kp FR_SINGLE_QUOTE                                                                                            &kp FR_SEMICOLON  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
+&kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                                                   &kp FR_DOT        &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
+&kp GRAVE   &kp FR_G            &none               &kp FR_J         &kp FR_K              &kp FR_MINUS         &kp LSHFT  &kp LCTRL               &layer_td  &kp LGUI  &kp RCTRL  &kp RET                &kp FR_SLASH      &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
+&magic 3 0  &kp HOME            &kp END             &kp LEFT         &kp RIGHT                                  &kp BSPC   &thumb_layers 2 DELETE  &kp LALT   &kp RALT  &kp TAB    &thumb_layers 1 SPACE                    &kp UP           &kp DOWN         &kp LBKT            &kp RBKT             &kp PG_DN
+            >;
+        };
+
+        symbols {
+            bindings = <
+&trans  &trans               &trans                   &trans                &trans                                                                              &trans  &trans  &trans  &trans  &trans
+&trans  &trans               &trans                   &trans                &trans              &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &type_dead FR_CARET  &kp FR_LESS_THAN         &kp FR_GREATER_THAN   &kp FR_DOLLAR       &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp FR_LEFT_BRACE    &kp FR_LEFT_PARENTHESIS  &kp FR_RPAR           &kp FR_RIGHT_BRACE  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &type_dead FR_TILDE  &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET  &kp FR_UNDER        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans               &trans                   &trans                &trans                      &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -148,7 +178,7 @@
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 3
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 4
             >;
         };
 
@@ -160,17 +190,6 @@
 &kp N3  &kp N9  &kp N5  &kp N1  &kp N7  &kp N2                                                  &kp N2  &kp N7  &kp N1  &kp N5  &kp N9  &kp N3
 &kp N4  &kp N0  &kp N6  &kp N2  &kp N8  &kp N3  &kp N4  &kp N5  &kp N6  &kp N6  &kp N5  &kp N4  &kp N3  &kp N8  &kp N2  &kp N6  &kp N0  &kp N4
 &kp N5  &kp N1  &kp N7  &kp N3  &kp N9          &kp N7  &kp N8  &kp N9  &kp N9  &kp N8  &kp N7          &kp N9  &kp N3  &kp N7  &kp N1  &kp N5
-            >;
-        };
-
-        symbols {
-            bindings = <
-&trans  &trans             &trans                   &trans                &trans                                                                              &trans  &trans  &trans  &trans  &trans
-&trans  &trans             &trans                   &trans                &trans              &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp FR_CARET       &kp FR_LESS_THAN         &kp FR_GREATER_THAN   &kp FR_DOLLAR       &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp FR_LEFT_BRACE  &kp FR_LEFT_PARENTHESIS  &kp FR_RPAR           &kp FR_RIGHT_BRACE  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp FR_TILDE       &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET  &kp FR_UNDER        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans             &trans                   &trans                &trans                      &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
