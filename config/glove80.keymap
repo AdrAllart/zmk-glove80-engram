@@ -81,6 +81,51 @@
             flavor = "balanced";
             retro-tap;
         };
+
+        dot_excl: dot_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_EXCL";
+            bindings = <&kp FR_DOT>, <&kp FR_EXCL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        semicol_col: semicol_col {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMICOL_COL";
+            bindings = <&kp FR_SEMI>, <&kp FR_COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        slash_quest: slash_quest {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_QUEST";
+            bindings = <&kp FR_SLASH>, <&kp FR_QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        quote_doubleq: quote_doubleq {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTE_DOUBLEQ";
+            bindings = <&kp FR_SINGLE_QUOTE>, <&kp FR_DOUBLE_QUOTES>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        minus_unders: minus_unders {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_UNDERS";
+            bindings = <&kp FR_MINUS>, <&kp FR_UNDERSCORE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -140,23 +185,23 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2              &kp F3              &kp F4           &kp F5                                                                                                                                                 &kp F6           &kp F7           &kp F8              &kp F9               &kp F10
-&kp EQUAL   &kp N1              &kp N2              &kp N3           &kp N4                &kp N5                                                                                                         &kp N6            &kp N7           &kp N8           &kp N9              &kp N0               &kp MINUS
-&kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &kp FR_SINGLE_QUOTE                                                                                            &kp FR_SEMICOLON  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
-&kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                                                   &kp FR_DOT        &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
-&kp GRAVE   &kp FR_G            &none               &kp FR_J         &kp FR_K              &kp FR_MINUS         &kp LSHFT  &kp LCTRL               &layer_td  &kp LGUI  &kp RCTRL  &kp RET                &kp FR_SLASH      &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
-&magic 3 0  &kp HOME            &kp END             &kp LEFT         &kp RIGHT                                  &kp BSPC   &thumb_layers 2 DELETE  &kp LALT   &kp RALT  &kp TAB    &thumb_layers 1 SPACE                    &kp UP           &kp DOWN         &kp LBKT            &kp RBKT             &kp PG_DN
+&kp F1      &kp F2              &kp F3              &kp F4           &kp F5                                                                                                                                        &kp F6           &kp F7           &kp F8              &kp F9               &kp F10
+&kp EQUAL   &kp N1              &kp N2              &kp N3           &kp N4                &kp N5                                                                                                    &kp N6        &kp N7           &kp N8           &kp N9              &kp N0               &kp MINUS
+&kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &quote_doubleq                                                                                            &semicol_col  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
+&kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                                              &dot_excl     &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
+&kp GRAVE   &kp FR_G            &none               &kp FR_J         &kp FR_K              &minus_unders   &kp LSHFT  &kp LCTRL               &layer_td  &kp LGUI  &kp RCTRL  &kp RET                &slash_quest  &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
+&magic 3 0  &kp HOME            &kp END             &kp LEFT         &kp RIGHT                             &kp BSPC   &thumb_layers 2 DELETE  &kp LALT   &kp RALT  &kp TAB    &thumb_layers 1 SPACE                &kp UP           &kp DOWN         &kp LBKT            &kp RBKT             &kp PG_DN
             >;
         };
 
         symbols {
             bindings = <
-&trans  &trans               &trans                   &trans                &trans                                                                              &trans  &trans  &trans  &trans  &trans
-&trans  &trans               &trans                   &trans                &trans              &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &type_dead FR_CARET  &kp FR_LESS_THAN         &kp FR_GREATER_THAN   &kp FR_DOLLAR       &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp FR_LEFT_BRACE    &kp FR_LEFT_PARENTHESIS  &kp FR_RPAR           &kp FR_RIGHT_BRACE  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &type_dead FR_TILDE  &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET  &kp FR_UNDER        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans               &trans                   &trans                &trans                      &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans               &trans                   &trans                &trans                                                                                                &trans              &trans            &trans               &trans           &trans
+&trans  &trans               &trans                   &trans                &trans              &trans                                                          &trans            &trans              &trans            &trans               &trans           &trans
+&trans  &type_dead FR_CARET  &kp FR_LESS_THAN         &kp FR_GREATER_THAN   &kp FR_DOLLAR       &kp FR_PERCENT                                                  &kp FR_AT         &kp FR_AMPERSAND    &kp FR_STAR       &type_dead FR_GRAVE  &kp FR_SQT       &trans
+&trans  &kp FR_LEFT_BRACE    &kp FR_LEFT_PARENTHESIS  &kp FR_RPAR           &kp FR_RIGHT_BRACE  &kp FR_EQUAL                                                    &kp FR_BACKSLASH  &kp FR_PLUS         &kp FR_MINUS      &kp FR_SLASH         &kp FR_DQT       &trans
+&trans  &type_dead FR_TILDE  &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET  &kp FR_UNDER        &kp FR_HASH     &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_PIPE       &kp FR_EXCLAMATION  &kp FR_SEMICOLON  &kp FR_COLON         &kp FR_QUESTION  &trans
+&trans  &trans               &trans                   &trans                &trans                              &trans  &trans  &trans  &trans  &trans  &trans                    &trans              &trans            &trans               &trans           &trans
             >;
         };
 
