@@ -181,7 +181,6 @@
         };
     };
 
-{
 // ==== MOUSE-KEY <section param> ===== (from https://github.com/sunaku/glove80-keymaps)
 
 
@@ -290,7 +289,6 @@
 #ifndef MOUSE_SCALER_WARP
 #define MOUSE_SCALER_WARP 12 1
 #endif
-/*HACK*/};
 
 // ==== MOUSE-KEY <section begins> ====
 #define ZMK_POINTING_DEFAULT_MOVE_VAL MOUSE_MOTION_MAXIMUM_SPEED
