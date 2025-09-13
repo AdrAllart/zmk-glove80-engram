@@ -12,7 +12,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include "keys_fr_belgian.h"
 
-CONFIG_ZMK_POINTING=y
 
 #define HYPER LC(LS(LG(LALT)))
 
