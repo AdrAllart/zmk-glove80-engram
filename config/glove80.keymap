@@ -12,7 +12,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include "keys_fr_belgian.h"
 
-
 #define HYPER LC(LS(LG(LALT)))
 
 // layers
@@ -56,6 +55,7 @@
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 53 54 64 65 66 67 68 69 70 71 55 56 57 74 73 72>;
+            retro-tap;
         };
 
         hml: hml {
@@ -70,6 +70,7 @@
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 57 58 59 60 61 62 63 73 74 75 76 77 78 79 72 55 56 54 71 70 69 52 53>;
+            retro-tap;
         };
 
         thumb_layers: thumb_layers {
@@ -198,19 +199,19 @@
 &kp EQUAL   &kp N1              &kp N2              &kp N3           &kp N4                &kp N5                                                                                                                        &kp N6        &kp N7           &kp N8           &kp N9              &kp N0               &kp MINUS
 &kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &quote_doubleq                                                                                                                &semicol_col  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
 &kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                                                                  &dot_excl     &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
-&kp GRAVE   &kp FR_G            &sl 4               &kp FR_J         &kp FR_K              &minus_unders   &kp ESCAPE                 &kp K_CALC              &kp PRINTSCREEN  &kp LGUI  &to 7    &kp RET                &slash_quest  &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
+&kp GRAVE   &kp FR_G            &sl 4               &kp FR_J         &kp FR_K              &minus_unders   &kp ESCAPE                 &kp K_CALC              &kp PRINTSCREEN  &kp LGUI  &to 6    &kp RET                &slash_quest  &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
 &magic 5 0  &kp HOME            &kp END             &kp LEFT         &kp RIGHT                             &thumb_layers 2 BACKSPACE  &thumb_layers 3 DELETE  &kp LALT         &kp RALT  &kp TAB  &thumb_layers 1 SPACE                &kp UP           &kp DOWN         &kp LBKT            &kp RBKT             &kp PG_DN
             >;
         };
 
         symbols {
             bindings = <
-&trans  &trans               &trans                   &trans                &trans                                                                                                &trans              &trans            &trans               &trans       &trans
-&trans  &trans               &trans                   &trans                &trans              &trans                                                          &trans            &trans              &trans            &trans               &trans       &trans
-&trans  &type_dead FR_CARET  &kp FR_LESS_THAN         &kp FR_GREATER_THAN   &kp FR_DOLLAR       &kp FR_PERCENT                                                  &kp FR_AT         &kp FR_AMPERSAND    &kp FR_STAR       &type_dead FR_GRAVE  &kp FR_SQT   &trans
-&trans  &kp FR_LEFT_BRACE    &kp FR_LEFT_PARENTHESIS  &kp FR_RPAR           &kp FR_RIGHT_BRACE  &kp FR_EQUAL                                                    &kp FR_BACKSLASH  &kp FR_PLUS         &kp FR_MINUS      &kp FR_SLASH         &kp FR_DQT   &trans
-&trans  &type_dead FR_TILDE  &kp FR_LEFT_BRACKET      &kp FR_RIGHT_BRACKET  &kp FR_UNDER        &kp FR_HASH     &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_PIPE       &kp FR_EXCLAMATION  &kp FR_SEMICOLON  &kp FR_COLON         &kp FR_EURO  &trans
-&trans  &trans               &trans                   &trans                &trans                              &trans  &trans  &trans  &trans  &trans  &trans                    &trans              &trans            &trans               &trans       &trans
+&trans  &trans                    &trans                             &trans                           &trans                                                                                                            &trans                    &trans               &trans                 &trans                 &trans
+&trans  &trans                    &trans                             &trans                           &trans                          &trans                                                          &trans            &trans                    &trans               &trans                 &trans                 &trans
+&trans  &type_dead FR_CARET       &kp FR_LESS_THAN                   &kp FR_GREATER_THAN              &kp FR_DOLLAR                   &kp FR_PERCENT                                                  &kp FR_AT         &kp FR_AMPERSAND          &kp FR_STAR          &type_dead FR_GRAVE    &kp FR_SQT             &trans
+&trans  &hml LEFT_WIN LEFT_BRACE  &hml LEFT_ALT FR_LEFT_PARENTHESIS  &hml LCTRL FR_RIGHT_PARENTHESIS  &hml LEFT_SHIFT FR_RIGHT_BRACE  &kp FR_EQUAL                                                    &kp FR_BACKSLASH  &hmr RIGHT_SHIFT FR_PLUS  &hmr RCTRL FR_MINUS  &hmr LEFT_ALT FR_FSLH  &hmr RIGHT_WIN FR_DQT  &trans
+&trans  &type_dead FR_TILDE       &kp FR_LEFT_BRACKET                &kp FR_RIGHT_BRACKET             &kp FR_UNDER                    &kp FR_HASH     &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_PIPE       &kp FR_EXCLAMATION        &kp FR_SEMICOLON     &kp FR_COLON           &kp FR_EURO            &trans
+&trans  &trans                    &trans                             &trans                           &trans                                          &trans  &trans  &trans  &trans  &trans  &trans                    &trans                    &trans               &trans                 &trans                 &trans
             >;
         };
 
@@ -254,29 +255,18 @@
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 6
-            >;
-        };
-
-        factory_test_layer {
-            bindings = <
-&kp N0  &kp N6  &kp N2  &kp N8  &kp N4                                                                  &kp N4  &kp N8  &kp N2  &kp N6  &kp N0
-&kp N1  &kp N7  &kp N3  &kp N9  &kp N5  &kp N0                                                  &kp N0  &kp N5  &kp N9  &kp N3  &kp N7  &kp N1
-&kp N2  &kp N8  &kp N4  &kp N0  &kp N6  &kp N1                                                  &kp N1  &kp N6  &kp N0  &kp N4  &kp N8  &kp N2
-&kp N3  &kp N9  &kp N5  &kp N1  &kp N7  &kp N2                                                  &kp N2  &kp N7  &kp N1  &kp N5  &kp N9  &kp N3
-&kp N4  &kp N0  &kp N6  &kp N2  &kp N8  &kp N3  &kp N4  &kp N5  &kp N6  &kp N6  &kp N5  &kp N4  &kp N3  &kp N8  &kp N2  &kp N6  &kp N0  &kp N4
-&kp N5  &kp N1  &kp N7  &kp N3  &kp N9          &kp N7  &kp N8  &kp N9  &kp N9  &kp N8  &kp N7          &kp N9  &kp N3  &kp N7  &kp N1  &kp N5
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 0
             >;
         };
 
         mouse {
             bindings = <
-&trans  &trans  &trans          &trans          &trans                                                                                       &trans      &trans     &trans        &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans                                                        &trans        &trans      &trans     &trans        &trans  &trans
-&trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans                                                        &kp LC(FR_V)  &kp RSHIFT  &kp RCTRL  &kp LEFT_ALT  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                                                        &kp LC(FR_C)  &mo 8       &mo 9      &mo 10        &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans  &mkp MCLK  &trans     &trans  &trans  &to 0   &trans  &trans        &trans      &trans     &trans        &trans  &trans
-&trans  &trans  &trans          &trans          &trans                   &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans                &trans      &trans     &trans        &trans  &trans
+&trans  &trans  &trans          &trans          &trans                                                                                                      &trans      &trans     &trans        &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans                                                                       &trans        &trans      &trans     &trans        &trans  &trans
+&trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans                                                                       &kp LC(FR_V)  &kp RSHIFT  &kp RCTRL  &kp LEFT_ALT  &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                                                                       &kp LC(FR_C)  &mo 7       &mo 8      &mo 9         &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans  &mkp MCLK  &trans     &trans  &trans  &to 0   &trans                 &trans        &trans      &trans     &trans        &trans  &trans
+&trans  &trans  &trans          &trans          &trans                   &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &thumb_layers 0 SPACE                &trans      &trans     &trans        &trans  &trans
             >;
         };
 
