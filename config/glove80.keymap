@@ -18,9 +18,16 @@
 // layers
 
 #define DEFAULT 0
-#define LOWER 1
-#define MAGIC 2
-#define FACTORY_TEST 3
+#define SYMBOLS  1
+#define NAV 2
+#define LOWER 3
+#define ACCENT 4
+#define MAGIC 5
+#define MOUSE 6
+#define MOUSE_SLOW 7
+#define MOUSE_FAST 8
+#define MOUSE_WARP 9
+#define TYPING 10
 
 / {
     behaviors {
