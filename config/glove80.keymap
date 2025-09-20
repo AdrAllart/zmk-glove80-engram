@@ -204,12 +204,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2              &kp F3              &kp F4           &kp F5                                                                                                                                                             &kp F6           &kp F7           &kp F8              &kp F9               &kp F10
-&kp EQUAL   &kp N1              &kp N2              &kp N3           &kp N4                &kp N5                                                                                                                         &kp N6        &kp N7           &kp N8           &kp N9              &kp N0               &kp MINUS
-&kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &quote_doubleq                                                                                                                 &semicol_col  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
-&kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                                                                   &dot_excl     &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
-&kp GRAVE   &kp FR_G            &sl 4               &kp FR_J         &kp FR_K              &minus_unders   &kp ESCAPE                 &kp K_CALC              &kp LS(LG(FR_S))  &kp LGUI  &to 6    &kp RET                &slash_quest  &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
-&magic 5 0  &kp HOME            &kp END             &kp LEFT         &kp RIGHT                             &thumb_layers 2 BACKSPACE  &thumb_layers 3 DELETE  &kp LALT          &kp RALT  &kp TAB  &thumb_layers 1 SPACE                &kp UP           &kp DOWN         &kp LBKT            &kp RBKT             &kp PG_DN
+&kp F1      &kp F2              &kp F3              &kp F4           &kp F5                                                                                                                                                                               &kp F6           &kp F7           &kp F8              &kp F9               &kp F10
+&kp EQUAL   &kp N1              &kp N2              &kp N3           &kp N4                &kp N5                                                                                                                                           &kp N6        &kp N7           &kp N8           &kp N9              &kp N0               &kp MINUS
+&kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &quote_doubleq                                                                                                                                   &semicol_col  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
+&kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                                                                                     &dot_excl     &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
+&kp GRAVE   &kp FR_G            &sl 4               &kp FR_J         &kp FR_K              &minus_unders   &kp ESCAPE                     &kp K_CALC              &kp LS(LG(FR_S))  &caps_word  &kp BACKSPACE        &kp RET                &slash_quest  &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
+&magic 5 0  &kp FR_B            &kp END             &kp LEFT         &kp RIGHT                             &thumb_layers 2 LC(BACKSPACE)  &thumb_layers 3 DELETE  &kp LALT          &kp RALT    &thumb_layers 6 TAB  &thumb_layers 1 SPACE                &kp UP           &kp DOWN         &kp LBKT            &kp FR_V             &kp PG_DN
             >;
         };
 
@@ -229,7 +229,7 @@
 &trans        &trans        &trans        &trans        &trans                                                                                &trans          &trans        &trans          &trans     &trans
 &trans        &trans        &trans        &trans        &trans          &trans                                                        &trans  &trans          &trans        &trans          &trans     &trans
 &trans        &trans        &trans        &kp LC(FR_A)  &kp LC(FR_Z)    &kp LC(FR_Y)                                                  &trans  &kp LS(TAB)     &kp LC(FR_Z)  &kp LC(FR_Y)    &kp TAB    &trans
-&trans        &trans        &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp LC(FR_F)                                                  &trans  &kp LEFT_ARROW  &kp UP        &kp DOWN_ARROW  &kp RIGHT  &trans
+&trans        &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp LC(FR_F)                                                  &trans  &kp LEFT_ARROW  &kp UP        &kp DOWN_ARROW  &kp RIGHT  &trans
 &kp LC(FR_L)  &kp LG(FR_V)  &kp LC(FR_X)  &kp LC(FR_C)  &kp LC(FR_V)    &none         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME        &kp PAGE_UP   &kp PAGE_DOWN   &kp END    &trans
 &trans        &trans        &trans        &trans        &trans                        &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans        &trans          &trans     &trans
             >;
@@ -260,7 +260,7 @@
         magic_layer {
             bindings = <
 &bt BT_CLR   &none            &none            &none            &none                                                                                     &none  &none  &none  &none  &bt BT_CLR_ALL
-&none        &none            &none            &none            &none            &none                                                             &none  &none  &none  &none  &none  &none
+&to 0        &none            &to 10           &none            &none            &none                                                             &none  &none  &none  &none  &none  &none
 &none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
 &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
 &sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
@@ -270,12 +270,12 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans          &trans          &trans                                                                                                       &trans      &trans     &trans        &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans                                                                        &trans        &trans      &trans     &trans        &trans  &trans
-&trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans                                                                        &kp LC(FR_V)  &kp RSHIFT  &kp RCTRL  &kp LEFT_ALT  &trans  &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                                                                        &kp LC(FR_C)  &mo 7       &mo 8      &mo 9         &trans  &trans
-&trans  &trans  &trans          &trans          &trans           &trans  &mkp MCLK  &trans     &trans  &trans  &to 0   &trans                  &trans        &trans      &trans     &trans        &trans  &trans
-&trans  &trans  &trans          &trans          &trans                   &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &thumb_layers 10 SPACE                &trans      &trans     &trans        &trans  &trans
+&trans  &trans  &trans          &trans          &trans                                                                                                      &trans      &trans     &trans        &trans  &trans
+&trans  &trans  &trans          &trans          &trans           &trans                                                                       &trans        &trans      &trans     &trans        &trans  &trans
+&trans  &trans  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &trans                                                                       &kp LC(FR_V)  &kp RSHIFT  &kp RCTRL  &kp LEFT_ALT  &trans  &trans
+&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                                                                       &kp LC(FR_C)  &mo 7       &mo 8      &mo 9         &trans  &trans
+&trans  &trans  &mkp MB4        &trans          &mkp MB5         &trans  &mkp MCLK  &trans     &trans  &trans  &to 0  &trans                  &trans        &trans      &trans     &trans        &trans  &trans
+&trans  &trans  &trans          &trans          &trans                   &mkp LCLK  &mkp RCLK  &trans  &trans  &none  &thumb_layers 10 SPACE                &trans      &trans     &trans        &trans  &trans
             >;
         };
 
@@ -319,7 +319,7 @@
 &kp TAB     &kp FR_B  &kp FR_Y  &kp FR_O  &kp FR_U   &quote_doubleq                                                                          &semicol_col  &kp FR_L  &kp FR_D  &kp FR_W  &kp FR_V  &kp FR_Z
 &kp FR_X    &kp FR_C  &kp FR_I  &kp FR_E  &kp FR_A   &kp FR_COMMA                                                                            &dot_excl     &kp FR_H  &kp FR_T  &kp FR_S  &kp FR_N  &kp FR_Q
 &kp GRAVE   &kp FR_G  &sl 4     &kp FR_J  &kp FR_K   &minus_unders   &kp ESCAPE     &kp K_CALC  &kp PRINTSCREEN  &kp LGUI  &to 6    &kp RET  &slash_quest  &kp FR_R  &kp FR_M  &kp FR_F  &kp FR_P  &kp PG_UP
-&magic 5 0  &kp HOME  &kp END   &kp LEFT  &kp RIGHT                  &kp BACKSPACE  &kp DEL     &kp LALT         &kp RALT  &kp TAB  &trans                 &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+&magic 5 0  &kp FR_B  &kp END   &kp LEFT  &kp RIGHT                  &kp BACKSPACE  &kp DEL     &kp LALT         &kp RALT  &kp TAB  &trans                 &kp UP    &kp DOWN  &kp LBKT  &kp FR_V  &kp PG_DN
             >;
         };
     };
