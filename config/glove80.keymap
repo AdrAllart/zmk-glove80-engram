@@ -204,12 +204,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&kp F1      &kp F2              &kp F3              &kp F4           &kp F5                                                                                                                                                                               &kp F6           &kp F7           &kp F8              &kp F9               &kp F10
-&kp EQUAL   &kp N1              &kp N2              &kp N3           &kp N4                &kp N5                                                                                                                                           &kp N6        &kp N7           &kp N8           &kp N9              &kp N0               &kp MINUS
-&kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &quote_doubleq                                                                                                                                   &semicol_col  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
-&kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                                                                                     &dot_excl     &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
-&kp GRAVE   &kp FR_G            &sl 4               &kp FR_J         &kp FR_K              &minus_unders   &kp ESCAPE                     &kp K_CALC              &kp LS(LG(FR_S))  &caps_word  &kp BACKSPACE        &kp RET                &slash_quest  &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
-&magic 5 0  &kp FR_B            &kp END             &kp LEFT         &kp RIGHT                             &thumb_layers 2 LC(BACKSPACE)  &thumb_layers 3 DELETE  &kp LALT          &kp RALT    &thumb_layers 6 TAB  &thumb_layers 1 SPACE                &kp UP           &kp DOWN         &kp LBKT            &kp FR_V             &kp PG_DN
+&kp F1      &kp F2              &kp F3              &kp F4           &kp F5                                                                                                                                                                           &kp F6           &kp F7           &kp F8              &kp F9               &kp F10
+&kp EQUAL   &kp N1              &kp N2              &kp N3           &kp N4                &kp N5                                                                                                                                       &kp N6        &kp N7           &kp N8           &kp N9              &kp N0               &kp MINUS
+&kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &quote_doubleq                                                                                                                               &semicol_col  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
+&kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                                                                                 &dot_excl     &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
+&kp GRAVE   &kp FR_G            &sl 4               &kp FR_J         &kp FR_K              &minus_unders   &kp ESCAPE                 &kp K_CALC              &kp LS(LG(FR_S))  &caps_word  &kp BACKSPACE        &kp RET                &slash_quest  &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
+&magic 5 0  &kp FR_B            &kp END             &kp LEFT         &kp FR_B                              &thumb_layers 2 BACKSPACE  &thumb_layers 3 DELETE  &kp LALT          &kp RALT    &thumb_layers 6 TAB  &thumb_layers 1 SPACE                &kp FR_V         &kp DOWN         &kp LBKT            &kp FR_Z             &kp PG_DN
             >;
         };
 
@@ -314,12 +314,12 @@
 
         typing {
             bindings = <
-&kp F1      &kp F2    &kp F3    &kp F4    &kp F5                                                                                                           &kp F6    &kp F7    &kp F8    &kp F9    &kp F10
-&kp EQUAL   &kp N1    &kp N2    &kp N3    &kp N4     &kp N5                                                                                  &kp N6        &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-&kp TAB     &kp FR_B  &kp FR_Y  &kp FR_O  &kp FR_U   &quote_doubleq                                                                          &semicol_col  &kp FR_L  &kp FR_D  &kp FR_W  &kp FR_V  &kp FR_Z
-&kp FR_X    &kp FR_C  &kp FR_I  &kp FR_E  &kp FR_A   &kp FR_COMMA                                                                            &dot_excl     &kp FR_H  &kp FR_T  &kp FR_S  &kp FR_N  &kp FR_Q
-&kp GRAVE   &kp FR_G  &sl 4     &kp FR_J  &kp FR_K   &minus_unders   &kp ESCAPE     &kp K_CALC  &kp PRINTSCREEN  &kp LGUI  &to 6    &kp RET  &slash_quest  &kp FR_R  &kp FR_M  &kp FR_F  &kp FR_P  &kp PG_UP
-&magic 5 0  &kp FR_B  &kp END   &kp LEFT  &kp RIGHT                  &kp BACKSPACE  &kp DEL     &kp LALT         &kp RALT  &kp TAB  &trans                 &kp UP    &kp DOWN  &kp LBKT  &kp FR_V  &kp PG_DN
+&kp F1      &kp F2    &kp F3    &kp F4    &kp F5                                                                                                          &kp F6    &kp F7    &kp F8    &kp F9    &kp F10
+&kp EQUAL   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                                                                                  &kp N6        &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+&kp TAB     &kp FR_B  &kp FR_Y  &kp FR_O  &kp FR_U  &quote_doubleq                                                                          &semicol_col  &kp FR_L  &kp FR_D  &kp FR_W  &kp FR_V  &kp FR_Z
+&kp FR_X    &kp FR_C  &kp FR_I  &kp FR_E  &kp FR_A  &kp FR_COMMA                                                                            &dot_excl     &kp FR_H  &kp FR_T  &kp FR_S  &kp FR_N  &kp FR_Q
+&kp GRAVE   &kp FR_G  &sl 4     &kp FR_J  &kp FR_K  &minus_unders   &kp ESCAPE     &kp K_CALC  &kp PRINTSCREEN  &kp LGUI  &to 6    &kp RET  &slash_quest  &kp FR_R  &kp FR_M  &kp FR_F  &kp FR_P  &kp PG_UP
+&magic 5 0  &kp FR_B  &kp END   &kp LEFT  &kp FR_B                  &kp BACKSPACE  &kp DEL     &kp LALT         &kp RALT  &kp TAB  &trans                 &kp FR_V  &kp DOWN  &kp LBKT  &kp FR_Z  &kp PG_DN
             >;
         };
     };
