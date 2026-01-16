@@ -215,12 +215,12 @@
 
         symbols {
             bindings = <
-&trans  &trans                    &trans                             &trans                           &trans                                                                                                            &trans                    &trans               &trans                  &trans                 &trans
-&trans  &trans                    &trans                             &trans                           &trans                          &trans                                                          &trans            &trans                    &trans               &trans                  &trans                 &trans
-&trans  &type_dead FR_CARET       &kp FR_LESS_THAN                   &kp FR_GREATER_THAN              &kp FR_DOLLAR                   &kp FR_PERCENT                                                  &kp FR_AT         &kp FR_AMPERSAND          &kp FR_STAR          &type_dead FR_GRAVE     &kp FR_SQT             &trans
-&trans  &hml LEFT_WIN LEFT_BRACE  &hml LEFT_ALT FR_LEFT_PARENTHESIS  &hml LCTRL FR_RIGHT_PARENTHESIS  &hml LEFT_SHIFT FR_RIGHT_BRACE  &kp FR_SLASH                                                    &kp FR_BACKSLASH  &hmr RIGHT_SHIFT FR_PLUS  &hmr RCTRL FR_MINUS  &hmr LEFT_ALT FR_EQUAL  &hmr RIGHT_WIN FR_DQT  &trans
-&trans  &type_dead FR_TILDE       &kp FR_LEFT_BRACKET                &kp FR_RIGHT_BRACKET             &kp FR_UNDER                    &kp FR_HASH     &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_PIPE       &kp FR_EXCLAMATION        &kp FR_SEMICOLON     &kp FR_COLON            &kp FR_EURO            &trans
-&trans  &trans                    &trans                             &trans                           &trans                                          &trans  &trans  &trans  &trans  &trans  &trans                    &trans                    &trans               &trans                  &trans                 &trans
+&trans  &trans                       &trans                             &trans                           &trans                                                                                                            &trans                    &trans               &trans                  &trans                 &trans
+&trans  &trans                       &trans                             &trans                           &trans                          &trans                                                          &trans            &trans                    &trans               &trans                  &trans                 &trans
+&trans  &type_dead FR_CARET          &kp FR_LESS_THAN                   &kp FR_GREATER_THAN              &kp FR_DOLLAR                   &kp FR_PERCENT                                                  &kp FR_AT         &kp FR_AMPERSAND          &kp FR_STAR          &kp FR_GRAVE            &kp FR_SQT             &trans
+&trans  &hml LEFT_WIN FR_LEFT_BRACE  &hml LEFT_ALT FR_LEFT_PARENTHESIS  &hml LCTRL FR_RIGHT_PARENTHESIS  &hml LEFT_SHIFT FR_RIGHT_BRACE  &kp FR_SLASH                                                    &kp FR_BACKSLASH  &hmr RIGHT_SHIFT FR_PLUS  &hmr RCTRL FR_MINUS  &hmr LEFT_ALT FR_EQUAL  &hmr RIGHT_WIN FR_DQT  &trans
+&trans  &type_dead FR_TILDE          &kp FR_LEFT_BRACKET                &kp FR_RIGHT_BRACKET             &kp FR_UNDER                    &kp FR_HASH     &trans  &trans  &trans  &trans  &trans  &trans  &kp FR_PIPE       &kp FR_EXCLAMATION        &kp FR_SEMICOLON     &kp FR_COLON            &kp FR_EURO            &trans
+&trans  &trans                       &trans                             &trans                           &trans                                          &trans  &trans  &trans  &trans  &trans  &trans                    &trans                    &trans               &trans                  &trans                 &trans
             >;
         };
 
@@ -237,12 +237,12 @@
 
         lower_layer {
             bindings = <
-&kp C_BRI_DN  &kp C_BRI_UP          &kp C_PREV        &kp C_NEXT     &kp C_PP                                                                             &kp C_MUTE         &kp C_VOL_DN      &kp C_VOL_UP         &none                   &kp PAUSE_BREAK
-&trans        &none                 &none             &none          &none           &kp HOME                                                  &kp LPAR   &kp KP_NUM         &kp KP_EQUAL      &kp KP_DIVIDE        &kp KP_MULTIPLY         &kp PSCRN
-&trans        &none                 &kp F7            &kp F8         &kp F9          &kp F10                                                   &kp RPAR   &kp KP_N7          &kp KP_N8         &kp KP_N9            &kp KP_MINUS            &kp SLCK
-&trans        &hml LEFT_WIN DELETE  &hml LEFT_ALT F4  &hml LCTRL F5  &hml RSHIFT F6  &kp F11                                                   &kp PRCNT  &hmr RSHIFT KP_N4  &hmr RCTRL KP_N5  &hmr LEFT_ALT KP_N6  &hmr RIGHT_WIN KP_PLUS  &none
-&trans        &kp K_CMENU           &kp F1            &kp F2         &kp F3          &kp F12   &trans  &trans  &to 0   &trans  &trans  &trans  &kp COMMA  &kp KP_N1          &kp KP_N2         &kp KP_N3            &kp KP_ENTER            &trans
-&trans        &kp CAPS              &kp INS           &kp F11        &kp F12                   &trans  &trans  &trans  &trans  &trans  &trans             &kp KP_N0          &kp KP_N0         &kp KP_DOT           &kp KP_ENTER            &trans
+&kp C_BRI_DN  &kp C_BRI_UP          &kp C_PREV        &kp C_NEXT     &kp C_PP                                                                                &kp C_MUTE         &kp C_VOL_DN      &kp C_VOL_UP         &none                   &kp PAUSE_BREAK
+&trans        &none                 &none             &none          &none           &kp HOME                                                  &kp FR_LPAR   &kp KP_NUM         &kp KP_EQUAL      &kp KP_DIVIDE        &kp KP_MULTIPLY         &kp PSCRN
+&trans        &none                 &kp F7            &kp F8         &kp F9          &kp F10                                                   &kp FR_RPAR   &kp KP_N7          &kp KP_N8         &kp KP_N9            &kp KP_MINUS            &kp SLCK
+&trans        &hml LEFT_WIN DELETE  &hml LEFT_ALT F4  &hml LCTRL F5  &hml RSHIFT F6  &kp F11                                                   &kp FR_PRCNT  &hmr RSHIFT KP_N4  &hmr RCTRL KP_N5  &hmr LEFT_ALT KP_N6  &hmr RIGHT_WIN KP_PLUS  &none
+&trans        &kp K_CMENU           &kp F1            &kp F2         &kp F3          &kp F12   &trans  &trans  &to 0   &trans  &trans  &trans  &kp FR_COMMA  &kp KP_N1          &kp KP_N2         &kp KP_N3            &kp KP_ENTER            &trans
+&trans        &kp CAPS              &kp INS           &kp F11        &kp F12                   &trans  &trans  &trans  &trans  &trans  &trans                &kp KP_N0          &kp KP_N0         &kp KP_DOT           &kp KP_ENTER            &trans
             >;
         };
 
