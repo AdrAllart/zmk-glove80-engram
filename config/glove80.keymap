@@ -248,12 +248,12 @@
 
         accent {
             bindings = <
-&trans  &trans            &trans             &trans             &trans                                                                                         &trans        &trans            &trans  &trans  &trans
-&trans  &trans            &trans             &trans             &trans             &trans                                                              &trans  &trans        &trans            &trans  &trans  &trans
-&trans  &trans            &trans             &caret_voyel FR_O  &caret_voyel FR_U  &kp FR_U_GRAVE                                                      &trans  &trans        &trans            &trans  &trans  &trans
-&trans  &trans            &caret_voyel FR_I  &caret_voyel FR_E  &caret_voyel FR_A  &kp FR_A_GRAVE                                                      &trans  &kp FR_CARET  &kp LS(FR_CARET)  &trans  &trans  &trans
-&trans  &kp FR_C_CEDILLA  &kp FR_CARET       &kp FR_E_ACUTE     &kp FR_E_GRAVE     &trans          &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans            &trans  &trans  &trans
-&trans  &trans            &trans             &trans             &trans                             &trans  &trans  &trans  &trans  &trans  &kp FR_SQT          &trans        &trans            &trans  &trans  &trans
+&trans  &trans            &trans             &trans              &trans                                                                                             &trans        &trans            &trans  &trans  &trans
+&trans  &trans            &trans             &trans              &trans             &trans                                                                  &trans  &trans        &trans            &trans  &trans  &trans
+&trans  &trans            &trans             &caret_voyel FR_O   &caret_voyel FR_U  &kp FR_U_GRAVE                                                          &trans  &trans        &trans            &trans  &trans  &trans
+&trans  &trans            &caret_voyel FR_I  &caret_voyel FR_E   &caret_voyel FR_A  &kp FR_A_GRAVE                                                          &trans  &kp FR_CARET  &kp LS(FR_CARET)  &trans  &trans  &trans
+&trans  &kp FR_C_CEDILLA  &kp FR_CARET       &kp FR_E_ACUTE      &kp FR_E_GRAVE     &kp LS(FR_A_GRAVE)  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans            &trans  &trans  &trans
+&trans  &trans            &trans             &kp LS(FR_E_ACUTE)  &trans                                 &trans  &trans  &trans  &trans  &trans  &kp FR_SQT          &trans        &trans            &trans  &trans  &trans
             >;
         };
 
