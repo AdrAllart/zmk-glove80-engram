@@ -106,7 +106,7 @@
         semicol_col: semicol_col {
             compatible = "zmk,behavior-mod-morph";
             label = "SEMICOL_COL";
-            bindings = <&kp FR_SEMI>, <&kp FR_COLON>;
+            bindings = <&kp FR_COLON>, <&kp FR_SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
