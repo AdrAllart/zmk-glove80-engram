@@ -191,6 +191,22 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ff_b {
+            bindings = <&kp FR_B>;
+            key-positions = <36 24>;
+            layers = <0>;
+        };
+
+        ff_v {
+            bindings = <&kp FR_V>;
+            key-positions = <43 31>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
