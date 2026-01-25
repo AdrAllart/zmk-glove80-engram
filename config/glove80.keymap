@@ -211,7 +211,7 @@
 &kp TAB     &kp FR_B            &kp FR_Y            &kp FR_O         &kp FR_U              &quote_doubleq                                                                                                                               &semicol_col  &kp FR_L         &kp FR_D         &kp FR_W            &kp FR_V             &kp FR_Z
 &kp FR_X    &hml LEFT_WIN FR_C  &hml LEFT_ALT FR_I  &hml LCTRL FR_E  &hml LEFT_SHIFT FR_A  &kp FR_COMMA                                                                                                                                 &dot_excl     &hmr RSHFT FR_H  &hmr RCTRL FR_T  &hmr LEFT_ALT FR_S  &hmr RIGHT_WIN FR_N  &kp FR_Q
 &kp GRAVE   &kp FR_G            &sl 4               &kp FR_J         &kp FR_K              &minus_unders   &kp ESCAPE                 &kp K_CALC              &kp LS(LG(FR_S))  &caps_word  &kp BACKSPACE        &kp RET                &slash_quest  &kp FR_R         &kp FR_M         &kp FR_F            &kp FR_P             &kp PG_UP
-&magic 5 0  &none               &kp END             &kp LEFT         &none                                 &thumb_layers 2 BACKSPACE  &thumb_layers 3 DELETE  &kp LALT          &kp RALT    &thumb_layers 6 TAB  &thumb_layers 1 SPACE                &none            &caps_word       &kp CAPSLOCK        &none                &kp PG_DN
+&magic 5 0  &none               &kp END             &kp LEFT         &tog 2                                &thumb_layers 2 BACKSPACE  &thumb_layers 3 DELETE  &kp LALT          &kp RALT    &thumb_layers 6 TAB  &thumb_layers 1 SPACE                &none            &caps_word       &kp CAPSLOCK        &none                &kp PG_DN
             >;
         };
 
@@ -233,7 +233,7 @@
 &trans        &trans        &trans        &kp LC(FR_A)  &kp LC(FR_Z)    &kp LC(FR_Y)                                                  &trans  &kp LS(TAB)     &kp LC(FR_Z)  &kp LC(FR_Y)    &kp TAB    &trans
 &trans        &kp LEFT_WIN  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_SHIFT  &kp LC(FR_F)                                                  &trans  &kp LEFT_ARROW  &kp UP        &kp DOWN_ARROW  &kp RIGHT  &trans
 &kp LC(FR_L)  &kp LG(FR_V)  &kp LC(FR_X)  &kp LC(FR_C)  &kp LC(FR_V)    &none         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME        &kp PAGE_UP   &kp PAGE_DOWN   &kp END    &trans
-&trans        &trans        &trans        &trans        &tog 2                        &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans        &trans          &trans     &trans
+&trans        &trans        &trans        &trans        &trans                        &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans        &trans          &trans     &trans
             >;
         };
 
@@ -252,9 +252,9 @@
             bindings = <
 &trans  &trans            &trans             &trans              &trans                                                                                             &trans        &trans            &trans    &trans  &trans
 &trans  &trans            &trans             &trans              &trans             &trans                                                                  &trans  &trans        &trans            &trans    &trans  &trans
-&trans  &trans            &trans             &caret_voyel FR_O   &caret_voyel FR_U  &kp FR_U_GRAVE                                                          &trans  &trans        &trans            &kp FR_V  &trans  &trans
-&trans  &kp FR_C_CEDILLA  &caret_voyel FR_I  &caret_voyel FR_E   &caret_voyel FR_A  &kp FR_A_GRAVE                                                          &trans  &kp FR_CARET  &kp LS(FR_CARET)  &kp FR_Z  &trans  &trans
-&trans  &kp FR_B          &kp FR_CARET       &kp FR_E_ACUTE      &kp FR_E_GRAVE     &kp LS(FR_A_GRAVE)  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans            &trans    &trans  &trans
+&trans  &trans            &trans             &caret_voyel FR_O   &caret_voyel FR_U  &kp FR_U_GRAVE                                                          &trans  &trans        &kp FR_B          &kp FR_V  &trans  &trans
+&trans  &trans            &caret_voyel FR_I  &caret_voyel FR_E   &caret_voyel FR_A  &kp FR_A_GRAVE                                                          &trans  &kp FR_CARET  &kp LS(FR_CARET)  &kp FR_Z  &trans  &trans
+&trans  &kp FR_C_CEDILLA  &kp FR_CARET       &kp FR_E_ACUTE      &kp FR_E_GRAVE     &kp LS(FR_A_GRAVE)  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans            &trans    &trans  &trans
 &trans  &trans            &trans             &kp LS(FR_E_ACUTE)  &trans                                 &trans  &trans  &trans  &trans  &trans  &kp FR_SQT          &trans        &trans            &trans    &trans  &trans
             >;
         };
